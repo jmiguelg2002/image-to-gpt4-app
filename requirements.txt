@@ -1,3 +1,7 @@
 streamlit
 openai
-Pillow
+pillow
+pymupdf
+python-docx
+pandas
+openpyxl
