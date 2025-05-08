@@ -1,7 +1,8 @@
 streamlit
 openai
-pillow
+Pillow
 pymupdf
 python-docx
 pandas
-openpyxl
+pydub
+audiorecorder
