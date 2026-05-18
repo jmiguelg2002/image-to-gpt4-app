@@ -43,7 +43,7 @@ def encode_image_to_base64(image_bytes, mime_type="image/png"):
 if uploaded_image:
     image_bytes = uploaded_image.read()
     image_display = Image.open(io.BytesIO(image_bytes))
-    st.image(image_display, caption="🖼️ Uploaded Image", use_container_width=True)
+    st.image(image_display, caption="🖼️ Uploaded Image", width="stretch)
 
 if uploaded_file:
     file_text = extract_file_text(uploaded_file)
@@ -64,10 +64,10 @@ if st.button("🚀 Submit to OpenAI"):
                     }}
                 ]
             }]
-            model = "gpt-4-turbo"  # vision-capable
+            model = "gpt-4o"  # vision-capable
         else:
             messages = [{"role": "user", "content": prompt + "\n\n" + file_text}]
-            model = "gpt-4"
+            model = "gpt-4o"
 
         response = client.chat.completions.create(
             model=model,
