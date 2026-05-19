@@ -43,7 +43,7 @@ def encode_image_to_base64(image_bytes, mime_type="image/png"):
 if uploaded_image:
     image_bytes = uploaded_image.read()
     image_display = Image.open(io.BytesIO(image_bytes))
-    st.image(image_display, caption="🖼️ Uploaded Image", width="stretch)
+    st.image(image_display, caption="🖼️ Uploaded Image", width="stretch")
 
 if uploaded_file:
     file_text = extract_file_text(uploaded_file)
